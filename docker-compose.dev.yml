@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  utils-web-services:
+    build: .
+    container_name: utils-web-services-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    volumes:
+      # 开发模式：挂载源代码以便热重载
+      - .:/app
+      - /app/node_modules
+      # 持久化存储
+      - ./data/uploads:/app/uploads
+      - ./data/downloads:/app/downloads
+    restart: unless-stopped
+    command: npm run dev
+    networks:
+      - utils-network
+
+networks:
+  utils-network:
+    driver: bridge

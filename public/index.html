@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具服务导航 - Utils Web Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-tools"></i>
+                    工具服务导航
+                </h1>
+                <p class="subtitle">提供各种实用的在线工具服务</p>
+            </div>
+        </header>
+
+        <!-- 工具卡片网格 -->
+        <main class="main-content">
+            <div class="tools-grid">
+                <!-- Excel转CSV工具 -->
+                <div class="tool-card" onclick="navigateToTool('xlsx-converter')">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Excel转CSV</h3>
+                        <p class="tool-description">
+                            将Excel文件(.xlsx)快速转换为CSV格式，支持批量处理
+                        </p>
+                        <div class="tool-features">
+                            <span class="feature-tag">文件转换</span>
+                            <span class="feature-tag">批量处理</span>
+                            <span class="feature-tag">在线处理</span>
+                        </div>
+                    </div>
+                    <div class="tool-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- 占位符：未来工具 -->
+                <div class="tool-card coming-soon">
+                    <div class="tool-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">更多工具</h3>
+                        <p class="tool-description">
+                            更多实用工具正在开发中，敬请期待
+                        </p>
+                        <div class="tool-features">
+                            <span class="feature-tag coming-soon-tag">即将推出</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 占位符：未来工具 -->
+                <div class="tool-card coming-soon">
+                    <div class="tool-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">系统工具</h3>
+                        <p class="tool-description">
+                            系统相关的实用工具集合
+                        </p>
+                        <div class="tool-features">
+                            <span class="feature-tag coming-soon-tag">开发中</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 占位符：未来工具 -->
+                <div class="tool-card coming-soon">
+                    <div class="tool-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">图片处理</h3>
+                        <p class="tool-description">
+                            图片格式转换、压缩、编辑等工具
+                        </p>
+                        <div class="tool-features">
+                            <span class="feature-tag coming-soon-tag">计划中</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Utils Web Services. 基于 MIT 许可证开源。</p>
+                <div class="footer-links">
+                    <a href="#" onclick="showAbout()">关于我们</a>
+                    <a href="#" onclick="showHelp()">使用帮助</a>
+                    <a href="#" onclick="showContact()">联系我们</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

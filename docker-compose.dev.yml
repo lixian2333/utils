@@ -16,6 +16,7 @@ services:
       # 持久化存储
       - ./data/uploads:/app/uploads
       - ./data/downloads:/app/downloads
+    user: "1000:1000"
     restart: unless-stopped
     command: npm run dev
     networks:

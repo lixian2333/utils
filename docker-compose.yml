@@ -13,6 +13,7 @@ services:
       # 持久化存储上传和下载的临时文件
       - ./data/uploads:/app/uploads
       - ./data/downloads:/app/downloads
+    user: "1000:1000"
     restart: unless-stopped
     healthcheck:
       test:

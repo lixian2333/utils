@@ -19,6 +19,7 @@ RUN mkdir -p uploads downloads
 # 设置文件权限
 RUN chown -R node:node /app
 RUN chmod -R 755 /app
+RUN chmod -R 777 /app/uploads /app/downloads
 
 # 切换到非root用户
 USER node
